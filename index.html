@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İnteraktif Parçacık Sanatı</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="controls-panel">
+            <h1>🎨 İnteraktif Parçacık Sanatı</h1>
+            
+            <div class="control-group">
+                <label for="particleCount">Parçacık Sayısı</label>
+                <input type="range" id="particleCount" min="50" max="500" value="200" class="slider">
+                <span class="value-display" id="particleCountValue">200</span>
+            </div>
+
+            <div class="control-group">
+                <label for="particleSpeed">Hız</label>
+                <input type="range" id="particleSpeed" min="0.1" max="3" step="0.1" value="1" class="slider">
+                <span class="value-display" id="particleSpeedValue">1.0</span>
+            </div>
+
+            <div class="control-group">
+                <label for="particleSize">Boyut</label>
+                <input type="range" id="particleSize" min="1" max="10" value="3" class="slider">
+                <span class="value-display" id="particleSizeValue">3</span>
+            </div>
+
+            <div class="control-group">
+                <label for="sizeRandomness">Boyut Rastgeleliği</label>
+                <input type="range" id="sizeRandomness" min="0" max="1" step="0.1" value="0" class="slider">
+                <span class="value-display" id="sizeRandomnessValue">0.0</span>
+            </div>
+
+            <div class="control-group">
+                <label for="connectionDistance">Bağlantı Mesafesi</label>
+                <input type="range" id="connectionDistance" min="50" max="200" value="100" class="slider">
+                <span class="value-display" id="connectionDistanceValue">100</span>
+            </div>
+
+            <div class="control-group">
+                <label for="mouseConnectionDistance">Mouse Bağlantı Mesafesi</label>
+                <input type="range" id="mouseConnectionDistance" min="100" max="400" value="200" class="slider">
+                <span class="value-display" id="mouseConnectionDistanceValue">200</span>
+            </div>
+
+            <div class="control-group">
+                <label for="mouseForce">Mouse Çekim Gücü</label>
+                <input type="range" id="mouseForce" min="-2" max="2" step="0.1" value="0" class="slider">
+                <span class="value-display" id="mouseForceValue">0.0</span>
+            </div>
+
+            <div class="control-group">
+                <label for="colorScheme">Renk Şeması</label>
+                <select id="colorScheme" class="select-control">
+                    <option value="galaxy">Galaksi</option>
+                    <option value="nebula">Nebula</option>
+                    <option value="cosmic">Kozmik</option>
+                    <option value="stardust">Yıldız Tozu</option>
+                    <option value="aurora">Aurora</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button id="resetBtn" class="btn">Sıfırla</button>
+                <button id="pauseBtn" class="btn">Duraklat</button>
+                <button id="fullscreenBtn" class="btn">Tam Ekran</button>
+            </div>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="particleCanvas"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
